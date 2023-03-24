@@ -42,7 +42,7 @@ mvn spring-boot:run
 ```sh
 curl -d @myTasks.json http://localhost:8080/api/jobs/v1/commands | bash
 ```
-##### v2 (to enable v2 endpoints see [corresponding section](### Starting the app with v2 endpoints enabled:)):
+##### v2 (to enable v2 endpoints see [corresponding section](#starting the app with v2 endpoints enabled:)):
 Providing `"Content-Type: application/json"` is required.
 ```sh
 curl -H "Content-Type: application/json" -d @myTasks.json http://localhost:8080/api/jobs/v2/commands | bash
