@@ -47,6 +47,13 @@ Providing `"Content-Type: application/json"` is required.
 ```sh
 curl -H "Content-Type: application/json" -d @myTasks.json http://localhost:8080/api/jobs/v2/commands | bash
 ```
+## Caching (LFU):
+- Jobs with task count over 1000 are cached.
+- Default cache size is 100.
+##### Adjusting cache size:
+```sh
+mvn spring-boot:run -Dspring-boot.run.arguments="--cache.size=200"
+```
 ## Example Payloads:
 #### Request body:
 ```json
