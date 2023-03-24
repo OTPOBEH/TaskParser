@@ -30,17 +30,17 @@ mvn spring-boot:run -Dspring-boot.run.arguments="--job.controller.v2.visible=tru
 |-------|-----------------------|--------------------------------------------------------------------|
 | POST  | /api/jobs/v2/commands | To sort job tasks and get extracted task commands as a bash script |
 ## Usage:
-#### Running the service:
+### Running the service:
 ```sh
 mvn spring-boot:run
 ```
-#### Executing result script via curl command example:
+### Executing result script via curl command example:
 **Note:** Example myTasks.json file can be found in folder `/resources/static`
-##### Getting bash script - v1:
+#### Getting bash script - v1:
 ```sh
 curl -d @myTasks.json http://localhost:8080/api/jobs/v1/commands | bash
 ```
-##### Getting bash script - v2:
+#### Getting bash script - v2:
 - To enable v2 endpoints see [corresponding section](#starting-the-app-with-v2-endpoints-enabled):
 - Providing `Content-Type: application/json` is required.
 ```sh
