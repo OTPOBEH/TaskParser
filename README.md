@@ -21,16 +21,14 @@ The service processes tasks and orders them based on their dependencies(requirem
 | GET   | /swagger-ui/index.html | To get the OpenApi Documentation                                   |
 | POST  | /api/jobs/v1/tasks     | To sort job tasks                                                  |
 | POST  | /api/jobs/v1/commands  | To sort job tasks and get extracted task commands as a bash script |
-
 ## API Endpoints v2 (not shown in OpenAPI doc):
-| Verbs | Endpoints             | Action                                                             |
-|-------|-----------------------|--------------------------------------------------------------------|
-| POST  | /api/jobs/v2/commands | To sort job tasks and get extracted task commands as a bash script |
-
 ### Starting the app with v2 endpoints enabled:
 ```sh
 mvn spring-boot:run -Dspring-boot.run.arguments="--job.controller.v2.visible=true"
 ```
+| Verbs | Endpoints             | Action                                                             |
+|-------|-----------------------|--------------------------------------------------------------------|
+| POST  | /api/jobs/v2/commands | To sort job tasks and get extracted task commands as a bash script |
 ## Usage:
 #### Running the service:
 ```sh
