@@ -36,13 +36,13 @@ mvn spring-boot:run
 ```
 ### Executing result script via curl command example:
 **Note:** Example myTasks.json file can be found in folder `/resources/static`
-#### Getting bash script - v1:
+#### Getting bash script V1 (using default cUrl `application/x-www-form-urlencoded` content type):
 ```sh
 curl -d @myTasks.json http://localhost:8080/api/jobs/v1/commands | bash
 ```
-#### Getting bash script - v2:
+#### Getting bash script V2:
 - To enable v2 endpoints see [corresponding section](#starting-the-app-with-v2-endpoints-enabled):
-- Providing `Content-Type: application/json` is required.
+- Specifying `Content-Type: application/json` is required.
 ```sh
 curl -H "Content-Type: application/json" -d @myTasks.json http://localhost:8080/api/jobs/v2/commands | bash
 ```
