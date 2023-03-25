@@ -1,8 +1,8 @@
 package com.triakobah.TaskParser.core.handler;
 
 import com.triakobah.TaskParser.core.constants.ApiConstants;
+import com.triakobah.TaskParser.core.handler.exceptions.ApiException;
 import com.triakobah.TaskParser.core.handler.exceptions.ErrorMessages;
-import com.triakobah.TaskParser.core.handler.exceptions.GeneralJobException;
 import com.triakobah.TaskParser.core.handler.exceptions.JobInputException;
 import org.slf4j.MDC;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
@@ -33,7 +33,7 @@ public class JobExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(Exception.class)
     public final ResponseEntity<?> handleGeneralException(Exception ex) {
 
-        GeneralJobException exception = new GeneralJobException(ErrorMessages.INTERNAL_SERVER_ERROR_MESSAGE);
+        ApiException exception = new ApiException(ErrorMessages.INTERNAL_SERVER_ERROR);
         exception.setRequestId(MDC.get(ApiConstants.REQUEST_ID));
         exception.setStatus(HttpStatus.INTERNAL_SERVER_ERROR);
 
@@ -52,9 +52,9 @@ public class JobExceptionHandler extends ResponseEntityExceptionHandler {
                 .map(DefaultMessageSourceResolvable::getDefaultMessage)
                 .collect(Collectors.toList());
 
-        JobInputException jobInputException = new JobInputException();
+        JobInputException jobInputException = new JobInputException(HttpStatus.BAD_REQUEST,
+                ErrorMessages.VALIDATION_ERROR);
         jobInputException.setRequestId(MDC.get(ApiConstants.REQUEST_ID));
-        jobInputException.setStatus(HttpStatus.BAD_REQUEST);
         jobInputException.setValidationErrors(validationList);
 
         return new ResponseEntity<>(jobInputException, HttpStatus.BAD_REQUEST);

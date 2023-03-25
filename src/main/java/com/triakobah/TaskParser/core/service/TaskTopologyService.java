@@ -1,7 +1,5 @@
 package com.triakobah.TaskParser.core.service;
 
-import com.triakobah.TaskParser.core.handler.exceptions.ErrorMessages;
-import com.triakobah.TaskParser.core.handler.exceptions.GeneralJobException;
 import com.triakobah.TaskParser.core.handler.exceptions.JobInputException;
 import com.triakobah.TaskParser.core.model.Task;
 import com.triakobah.TaskParser.core.model.TaskInput;

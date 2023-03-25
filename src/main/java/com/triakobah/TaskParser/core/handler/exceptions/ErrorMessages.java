@@ -15,8 +15,10 @@ public final class ErrorMessages {
             - must contain valid JSON string.
             """;
 
-    public static final String INTERNAL_SERVER_ERROR_MESSAGE = "Something went wrong. " +
+    public static final String INTERNAL_SERVER_ERROR = "Something went wrong. " +
             "Please, try again and if the problem persists contact your administrator.";
+
+    public static final String VALIDATION_ERROR = "Validation error(s). Please check your input.";
 
     private ErrorMessages() {
         //should not be instantiated

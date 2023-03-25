@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
-public abstract class ApiException extends RuntimeException{
+public class ApiException extends RuntimeException{
     String requestId;
 
     HttpStatus status;
