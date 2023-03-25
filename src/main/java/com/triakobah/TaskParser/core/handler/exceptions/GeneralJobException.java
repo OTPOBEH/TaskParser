@@ -1,16 +1,14 @@
 package com.triakobah.TaskParser.core.handler.exceptions;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @Data
 @AllArgsConstructor
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = true)
 @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-public class GeneralJobException extends RuntimeException {
+public class GeneralJobException extends ApiException {
     public GeneralJobException(String exception) {
         super(exception);
     }

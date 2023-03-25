@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**TODO: Un-hide feature flag if/when change of contract is acceptable so to set the cUrl content type to "application/json".
+/** Un-hide feature flag if/when change of contract is acceptable so to set the cUrl content type to "application/json".
  * The above change must be addressed also in the <a href="file:/resources/static/open-api.json">open-api.json</a>
 */
 @ConditionalOnExpression(value = "${job.controller.v2.visible}")

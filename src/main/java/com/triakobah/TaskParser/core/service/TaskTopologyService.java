@@ -34,7 +34,7 @@ public class TaskTopologyService implements TaskService {
             throw new JobInputException(e);
         } catch (Exception e) {
             LOGGER.error("ERROR: Task Sorting", e);
-            throw new GeneralJobException(ErrorMessages.INTERNAL_SERVER_ERROR_MESSAGE);
+            throw e;
         }
     }
 }
