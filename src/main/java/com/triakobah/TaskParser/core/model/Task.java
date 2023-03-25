@@ -19,9 +19,9 @@ public class Task {
     private String command;
 
     public static Task createFrom(TaskInput taskInput) {
-        Task task = new Task();
-        task.setName(taskInput.getName());
-        task.setCommand(taskInput.getCommand());
+        Task task = Task.builder()
+                .name(taskInput.getName())
+                .command(taskInput.getCommand()).build();
         return task;
     }
 }
