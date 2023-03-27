@@ -19,6 +19,7 @@ public final class ErrorMessages {
             "Please, try again and if the problem persists contact your administrator.";
 
     public static final String VALIDATION_ERROR = "Validation error(s). Please check your input.";
+    public static final String DUPLICATE_TASK_NAME = "Task name must be unique.";
 
     private ErrorMessages() {
         //should not be instantiated

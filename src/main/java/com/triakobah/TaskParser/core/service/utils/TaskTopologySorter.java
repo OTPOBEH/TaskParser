@@ -88,6 +88,8 @@ public final class TaskTopologySorter {
         //Add task node
         if (!taskGraphMap.containsKey(task.getName())) {
             taskGraphMap.put(task.getName(), new HashSet<>());
+        } else {
+            throw new JobInputException(HttpStatus.BAD_REQUEST, ErrorMessages.DUPLICATE_TASK_NAME);
         }
 
         // Enlist dependencies (Create vertices)
