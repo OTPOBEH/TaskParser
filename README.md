@@ -34,9 +34,9 @@ mvn spring-boot:run -Dspring-boot.run.arguments="--job.controller.v2.visible=tru
 ```sh
 mvn spring-boot:run
 ```
-### Executing result script via curl command example:
+### Executing result script via cURL command example:
 **Note:** Example myTasks.json file can be found in folder `/resources/static`
-#### Getting bash script V1 (using default cUrl `application/x-www-form-urlencoded` content type):
+#### Getting bash script V1 (using default cURL `application/x-www-form-urlencoded` content type):
 ```sh
 curl -d @myTasks.json http://localhost:8080/api/jobs/v1/commands | bash
 ```
