@@ -88,7 +88,7 @@ mvn spring-boot:run -Dspring-boot.run.arguments="--cache.size=200"
 	]
 }
 ```
-#### Response body:
+#### Response body (.../tasks):
 ```json
 [
 	{
@@ -109,7 +109,7 @@ mvn spring-boot:run -Dspring-boot.run.arguments="--cache.size=200"
 	}
 ]
 ```
-#### Bash commands script response text example:
+#### Bash commands script response text example (.../commands):
 ```sh
 touch /tmp/file1
 echo "Hello World!" > /tmp/file1
