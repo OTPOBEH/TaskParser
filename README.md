@@ -46,9 +46,10 @@ curl -d @myTasks.json http://localhost:8080/api/jobs/v1/commands | bash
 ```sh
 curl -H "Content-Type: application/json" -d @myTasks.json http://localhost:8080/api/jobs/v2/commands | bash
 ```
-## Caching (LFU):
+## Caching:
 - Jobs with task count over 1000 are cached.
 - Default cache size is 100.
+- LFU eviction policy
 ##### Adjusting cache size:
 ```sh
 mvn spring-boot:run -Dspring-boot.run.arguments="--cache.size=200"
